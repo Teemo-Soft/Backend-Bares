@@ -7,9 +7,9 @@ const { OAuth2Client } = require('google-auth-library')
 module.exports = {
   Mutation: {
     login(obj, args, context, info) {
-      const { username, password } = args
+      const { email, password } = args
       return User.findOne({
-        where: { username },
+        where: { email },
       })
         .then(async user => {
           if (!user) throw new Error('Invalid user') 

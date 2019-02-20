@@ -15,10 +15,10 @@ module.exports = {
                 ],
                 attributes: ['id', 'names', 'lastnames', 'email'],
             }).then(data =>
-                data.map(e => {
+               data.map(e => {
                     e.roles = e.Groups
                     return e
-                })
+                }) 
             )
         },
         User(obj, args, context, info) {

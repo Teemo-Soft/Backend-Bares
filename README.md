@@ -3,6 +3,7 @@
 sequelize db:create
 sequelize db:migrate
 sequelize db:seed:all
+sequelize db:migrate:undo
 ```
 
 # ENUM
